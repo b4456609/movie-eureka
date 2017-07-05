@@ -6,4 +6,4 @@ EXPOSE 8761
 
 COPY ./build/libs/eureka-0.0.1-SNAPSHOT.jar /opt/app/
 
-CMD ["java", "-jar", "eureka-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT exec java $JAVA_OPTS -jar eureka-0.0.1-SNAPSHOT.jar
